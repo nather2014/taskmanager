@@ -20,7 +20,11 @@ public class Task {
 
   private boolean completed = false;
 
-  protected Task() {}
+  private Task task;
+
+  protected Task(Task task) {
+    this.task = task;
+  }
 
   public Task(String title) {
     this.title = title;
