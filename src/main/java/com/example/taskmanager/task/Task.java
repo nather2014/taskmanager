@@ -45,4 +45,13 @@ public class Task {
   public void setCompleted(boolean completed) {
     this.completed = completed;
   }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
 }
