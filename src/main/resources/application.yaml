@@ -4,13 +4,13 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/taskmanager
-    username: postgres
-    password: postgres
+    username: taskmanager
+    password: taskmanager
     driver-class-name: org.postgresql.Driver
 
   jpa:
     open-in-view: false
-    show-sql: true
+    show-sql: false
     hibernate:
       ddl-auto: update
     properties:
@@ -18,11 +18,12 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:
           time_zone: Asia/Kolkata
-        format_sql: true
+        format_sql: false
 
 logging:
   level:
-    root: INFO
-    org.springframework: WARN
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql: TRACE
+    root: ERROR
+    org.springframework: ERROR
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql: ERROR
+
