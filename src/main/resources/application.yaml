@@ -3,9 +3,9 @@ spring:
     name: taskmanager
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/taskmanager
-    username: taskmanager
-    password: taskmanager
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/taskmanager}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -26,4 +26,3 @@ logging:
     org.springframework: ERROR
     org.hibernate.SQL: ERROR
     org.hibernate.type.descriptor.sql: ERROR
-
